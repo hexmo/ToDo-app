@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>To do app</title>
+</head>
+<body>
+    <nav><h1>Todo APP</h1></nav>
+
+    <div class="swimlane-container">
+        <div class="swimlane">
+            <div class="swimlane-heading">ADD TASK</div>
+            <div class="swimlane-content">
+                <div class="card">
+                    <form action="/" method="POST">
+                        <input type="text" placeholder="Enter heading" name="heading" id="heading" required><br>
+                        <textarea placeholder="Enter task" name="task" id="task" rows="5" style="width: 100%; height: 100%;" required></textarea><br>
+                        <button class="add" type="submit">Add task</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="swimlane">
+            <div class="swimlane-heading">NOT COMPLETED</div>
+            <div class="swimlane-content">
+                {% for progress in inprogress %}
+                    <div class="card">
+                        <div class="heading">{{ progress.heading }}</div>
+                        <p>{{ progress.task }}</p>
+                        <a href="/done/{{ progress.id }}"><button class="doing">Mark as done</button></a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="swimlane">
+            <div class="swimlane-heading">COMPLETED</div>
+            <div class="swimlane-content">
+                {% for complete in completed %}
+                    <div class="card">
+                        <div class="heading">{{ complete.heading }}</div>
+                        <p>{{ complete.task }}</p>
+                        <a href="/delete/{{ complete.id }}"><button class="done">Delete </button></a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

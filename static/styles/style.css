@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    
+}
+
+nav h1{
+    color: white;
+    text-align: center;
+    padding: 0.3em;
+}
+
+
+
+
+/* old approach */
+
+
+/* new approach */
+
+.swimlane-container{
+    display: flex;
+}
+
+.swimlane{
+    width: 33%;
+    height: 100%;
+    padding: 1em;
+}
+
+
+.swimlane-heading{
+    width: 100%;
+    background-color: #F4F5F7;
+    padding: 10px 1em;
+    color: #5E6C84;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.swimlane-content{
+    margin-top: 1em;
+    background-color: #F4F5F7;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card{
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px 2px #E0E3E7;    
+}
+/* for normal cards */
+.card .heading{
+    color: #172B4D;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card p{
+    color: rgb(84, 89, 97);
+    font-size: 14px;
+    margin-bottom: 5px;   
+}
+
+/* for form */
+#heading{
+    color: #172B4D;
+    font-size: 16px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+}
+
+#task{
+    color: rgb(84, 89, 97);
+    font-size: 14px;
+    margin-bottom: 5px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+}
+
+
+
+.card button{
+    border: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* button colors */
+.doing{
+    background-color: rgb(22, 129, 54);
+    cursor: pointer;
+}
+
+.doing:hover{  
+    background-color: rgb(83, 172, 103);
+}
+
+
+.done{
+    background-color: rgb(245, 62, 17);
+    cursor: pointer;
+}
+
+.done:hover{
+    background-color: rgb(231, 143, 121);
+}
+
+.add{
+    background-color: rgb(74, 180, 255);
+    cursor: pointer;
+}
+
+.add:hover{
+    background-color: #BFE4FF;
+}
+
+/* form */
+form input{
+
+}
